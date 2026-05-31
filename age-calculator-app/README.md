@@ -16,6 +16,14 @@
 
 <!-- VARIABLE_SECTION_1_START -->
 
+  <h4>
+    <a href="https://agecalculator-kv.netlify.app/">🚀 Live Demo</a>
+    <span> · </span>
+    <a href="https://github.com/itskaushikverma/age-calculator-app">📁 Repository</a>
+    <span> · </span>
+    <a href="https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q">🎯 Challenge</a>
+  </h4>
+    
 <!-- VARIABLE_SECTION_1_END -->
 
 </div>
@@ -98,6 +106,10 @@ Users can:
 Clone the project:
 
 <!-- VARIABLE_SECTION_2_START -->
+
+```bash
+git clone https://github.com/itskaushikverma/age-calculator-app.git
+```
 
 <!-- VARIABLE_SECTION_2_END -->
 
@@ -184,5 +196,31 @@ If you would like to contribute:
 This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
 
 <!-- VARIABLE_SECTION_3_START -->
+
+<a id="contact"></a>
+
+## 👤 Author
+
+<div align="center">
+  <img src="https://github.com/itskaushikverma.png" alt="Developer" width="100" height="100" style="border-radius:50%; width:100px; height:100px; object-fit:cover; display:block;"/>
+  
+  <h3>Kaushik Verma</h3>
+  
+  <p><em>Building AI tools that turn long documents into clear decisions.</em></p>
+
+[![Email](https://img.shields.io/badge/Email-kaushikverma321@gmail.com%40gmail.com-EA4335?style=for-the-badge&logo=gmail)](mailto:kaushikverma321@gmail.com)
+[![Portfolio](https://img.shields.io/badge/Website-https://www.kaushikverma.com-000000?style=for-the-badge&logo=vercel)](https://www.kaushikverma.com)
+[![GitHub](https://img.shields.io/badge/GitHub-itskaushikverma-181717?style=for-the-badge&logo=github)](https://github.com/itskaushikverma)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-https://www.linkedin.com/in/itskaushikverma-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/itskaushikverma)
+[![Twitter](https://img.shields.io/badge/Twitter-https://x.com/SilentK68296830-1DA1F2?style=for-the-badge&logo=twitter)](https://x.com/SilentK68296830)
+
+  <p>Open to product feedback, collaboration, and thoughtful conversation.</p>
+</div>
+
+<div align="center">
+  <p>If you found this project helpful, please consider giving it a ⭐️</p>
+  
+  [![GitHub stars](https://img.shields.io/github/stars/itskaushikverma/frontend-mentor?style=social)](https://github.com/itskaushikverma/frontend-mentor)
+</div>
 
 <!-- VARIABLE_SECTION_3_END -->
