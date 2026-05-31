@@ -1,6 +1,5 @@
 import React from 'react';
 import { MotionDiv } from './MotionWrapper';
-import AnimatedNumber from './AnimateNumber';
 import AgeItem from './AgeItem';
 
 export default function AgeResult({ age }) {

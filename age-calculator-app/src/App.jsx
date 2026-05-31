@@ -2,10 +2,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import z from 'zod';
-import { MotionDiv, MotionForm } from './components/MotionWrapper';
-import InputField from './components/InputField';
-import ArrowIcon from './assets/svg/icon-arrow.svg';
-import AnimatedNumber from './components/AnimateNumber';
+import { MotionDiv } from './components/MotionWrapper';
 import AgeResult from './components/AgeResult';
 import AgeForm from './components/AgeForm';
 

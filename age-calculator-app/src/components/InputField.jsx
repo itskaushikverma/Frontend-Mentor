@@ -1,5 +1,5 @@
 import React from 'react';
-import { MotionDiv, MotionForm } from './MotionWrapper';
+import { MotionDiv } from './MotionWrapper';
 
 export default function InputField({ label, placeholder, id, name, inputProps, error }) {
   return (
