@@ -85,11 +85,11 @@ git clone https://github.com/${githubUsername}/age-calculator-app.git
   
   <p><em>Building AI tools that turn long documents into clear decisions.</em></p>
 
-[![Email](https://img.shields.io/badge/Email-${profile.email}%40gmail.com-EA4335?style=for-the-badge&logo=gmail)](mailto:${profile.email})
-[![Portfolio](https://img.shields.io/badge/Website-${profile.portfolio}-000000?style=for-the-badge&logo=vercel)](${profile.portfolio})
-[![GitHub](https://img.shields.io/badge/GitHub-${githubUsername}-181717?style=for-the-badge&logo=github)](${profile.github})
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-${profile.linkedin}-0077B5?style=for-the-badge&logo=linkedin)](${profile.linkedin})
-[![Twitter](https://img.shields.io/badge/Twitter-${profile.twitter}-1DA1F2?style=for-the-badge&logo=twitter)](${profile.twitter})
+[![Email](https://img.shields.io/badge/Email-${profile.email}%40gmail.com-EA4335?style=flat-square&logo=gmail)](mailto:${profile.email})
+[![Portfolio](https://img.shields.io/badge/Website-${profile.portfolio}-000000?style=flat-square&logo=vercel)](${profile.portfolio})
+[![GitHub](https://img.shields.io/badge/GitHub-${githubUsername}-181717?style=flat-square&logo=github)](${profile.github})
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-${profile.linkedin}-0077B5?style=flat-square&logo=linkedin)](${profile.linkedin})
+[![Twitter](https://img.shields.io/badge/Twitter-${profile.twitter}-1DA1F2?style=flat-square&logo=twitter)](${profile.twitter})
 
   <p>Open to product feedback, collaboration, and thoughtful conversation.</p>
 </div>

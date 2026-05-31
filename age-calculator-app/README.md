@@ -17,7 +17,7 @@
 <!-- VARIABLE_SECTION_1_START -->
 
   <h4>
-    <a href="https://agecalculator-kv.netlify.app/">🚀 Live Demo</a>
+    <a href="https://agecalculator-kv.netlify.app/" target="_blank" rel="noopener noreferrer">🚀 Live Demo</a>
     <span> · </span>
     <a href="https://github.com/itskaushikverma/age-calculator-app">📁 Repository</a>
     <span> · </span>
@@ -166,7 +166,7 @@ src/
 
 This project is deployed on Netlify:
 
-- https://agecalculator-kv.netlify.app/
+- <a href="https://agecalculator-kv.netlify.app/" target="_blank" rel="noopener noreferrer">https://agecalculator-kv.netlify.app/</a>
 
 To create a production build locally:
 
