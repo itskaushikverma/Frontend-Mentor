@@ -1,35 +1,62 @@
 import { zodResolver } from '@hookform/resolvers/zod';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import z from 'zod';
 import { MotionDiv } from './components/MotionWrapper';
 import AgeResult from './components/AgeResult';
 import AgeForm from './components/AgeForm';
 
-const currentYear = new Date().getFullYear();
+const schema = z
+  .object({
+    day: z
+      .string()
+      .nonempty('This field is required')
+      .regex(/^\d+$/, 'Must be a valid day')
+      .transform((s) => parseInt(s, 10))
+      .refine((d) => d >= 1 && d <= 31, { message: 'Must be a valid day' }),
 
-const schema = z.object({
-  day: z
-    .string()
-    .nonempty('This field is required')
-    .regex(/^\d+$/, 'Must be a valid day')
-    .transform((s) => parseInt(s, 10))
-    .refine((d) => d >= 1 && d <= 31, { message: 'Must be a valid day' }),
+    month: z
+      .string()
+      .nonempty('This field is required')
+      .regex(/^\d+$/, 'Must be a valid month')
+      .transform((s) => parseInt(s, 10))
+      .refine((m) => m >= 1 && m <= 12, { message: 'Must be a valid month' }),
 
-  month: z
-    .string()
-    .nonempty('This field is required')
-    .regex(/^\d+$/, 'Must be a valid month')
-    .transform((s) => parseInt(s, 10))
-    .refine((m) => m >= 1 && m <= 12, { message: 'Must be a valid month' }),
+    year: z
+      .string()
+      .nonempty('This field is required')
+      .regex(/^\d+$/, 'Must be a valid year')
+      .transform((s) => parseInt(s, 10))
+      .refine((y) => y <= new Date().getFullYear(), { message: 'Must be in the past' }),
+  })
+  .superRefine((value, context) => {
+    const candidateDate = new Date(value.year, value.month - 1, value.day);
 
-  year: z
-    .string()
-    .nonempty('This field is required')
-    .regex(/^\d+$/, 'Must be a valid year')
-    .transform((s) => parseInt(s, 10))
-    .refine((y) => y <= currentYear, { message: 'Must be in the past' }),
-});
+    if (
+      candidateDate.getFullYear() !== value.year ||
+      candidateDate.getMonth() !== value.month - 1 ||
+      candidateDate.getDate() !== value.day
+    ) {
+      context.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['day'],
+        message: 'Must be a valid date',
+      });
+      return;
+    }
+
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    candidateDate.setHours(0, 0, 0, 0);
+
+    if (candidateDate > today) {
+      context.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['year'],
+        message: 'Must be in the past',
+      });
+    }
+  });
 
 export default function App() {
   const [portfolioUrl, setPortfolioUrl] = useState('');
@@ -57,7 +84,7 @@ export default function App() {
         const data = await resp.json();
         setPortfolioUrl(data.portfolio);
       } catch (e) {
-        console.log(e);
+        console.error('Failed to load portfolio URL', e);
       }
     };
     handleGet();
